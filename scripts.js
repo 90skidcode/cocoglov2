@@ -49,13 +49,14 @@ document.querySelectorAll('a,button,.prod-card,.class-card,.fcard,.val-card').fo
 // ─── ROUTER ───
 const pages = {
   home: document.getElementById('page-home'),
-  shop: document.getElementById('page-shop'),
   about: document.getElementById('page-about'),
   classes: document.getElementById('page-classes'),
   contact: document.getElementById('page-contact'),
 };
 function navigate(id){
-  Object.values(pages).forEach(p=>p.classList.remove('active'));
+  Object.values(pages).forEach(p=>{
+    if(p) p.classList.remove('active');
+  });
   if(pages[id]) pages[id].classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
   
@@ -71,7 +72,6 @@ function navigate(id){
     a.classList.toggle('active', a.dataset.nav===id);
   });
   initReveal();
-  if(id==='shop') renderShop();
   if(id==='classes') renderClasses();
 }
 
@@ -86,7 +86,7 @@ function contactWA(type, extra = '') {
     'class': `Hi! I'd like to book the "${extra}" workshop. Is there an upcoming slot for this?`
   };
   const text = messages[type] || messages['nav'];
-  window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
 }
 
 // ─── NAVBAR ───

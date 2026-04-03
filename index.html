@@ -163,49 +163,7 @@
     </div>
   </section>
 
-  <!-- FEATURED PRODUCTS -->
-  <section class="feat-prods" style="display: none;">
-    <div class="section-wrap" >
-      <div class="feat-prods-header">
-        <div>
-          <p class="sec-eyebrow reveal">— Our Collection</p>
-          <h2 class="sec-title reveal d1">Each bar,<br><em>a little luxury</em></h2>
-        </div>
-        <button class="btn btn-gold-outline reveal d2" onclick="navigate('shop')">View All Soaps →</button>
-      </div>
-      <div class="prod-grid" id="homeProdGrid">
-        <div class="prod-card reveal d1">
-          <div class="prod-img"><img id="hp1" alt="Turquoise soap"></div>
-          <span class="prod-badge">Bestseller</span>
-          <div class="prod-body">
-            <p class="prod-tag">Ocean Series</p>
-            <h3 class="prod-name">Turquoise Tide</h3>
-            <p class="prod-desc">Sea minerals & coconut oil with gold mica layers a luxurious, calming experience.</p>
-            <div class="prod-foot"><span class="prod-price">₹420</span><button class="prod-add" onclick="addToCart(1,'Turquoise Tide',420)">Add to Cart</button></div>
-          </div>
-        </div>
-        <div class="prod-card reveal d2">
-          <div class="prod-img"><img id="hp2" alt="Heart soap"></div>
-          <div class="prod-body">
-            <p class="prod-tag">Love Collection</p>
-            <h3 class="prod-name">Rose Heart</h3>
-            <p class="prod-desc">Creamy goat milk base with rose fragrance — stunning embeds perfect for gifting.</p>
-            <div class="prod-foot"><span class="prod-price">₹380</span><button class="prod-add" onclick="addToCart(2,'Rose Heart',380)">Add to Cart</button></div>
-          </div>
-        </div>
-        <div class="prod-card reveal d3">
-          <div class="prod-img"><img id="hp3" alt="Dragon fruit soap"></div>
-          <span class="prod-badge new">New</span>
-          <div class="prod-body">
-            <p class="prod-tag">Fruit Series</p>
-            <h3 class="prod-name">Dragon Fruit</h3>
-            <p class="prod-desc">Vivid two-tone bar with real poppy seeds for gentle exfoliation and fruity glow.</p>
-            <div class="prod-foot"><span class="prod-price">₹450</span><button class="prod-add" onclick="addToCart(3,'Dragon Fruit',450)">Add to Cart</button></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- FEATURED PRODUCTS HIDDEN -->
 
   <!-- WORKSHOP TEASER -->
   <section class="ws-teaser">
@@ -274,27 +232,7 @@
   <div id="homeFooter"></div>
 </div>
 
-<!-- ═══════════════ SHOP PAGE ═══════════════ -->
-<div class="page" id="page-shop">
-  <section class="shop-hero">
-    <p class="sec-eyebrow reveal">— Our Collection</p>
-    <h2 class="sec-title reveal d1" style="font-size:clamp(2.5rem,4vw,4.2rem)">Artisan <em>Soaps</em></h2>
-    <p class="reveal d2" style="font-size:0.88rem;color:var(--text-mid);line-height:1.9;max-width:480px;margin:1rem auto 0">Each bar handcrafted with natural ingredients, made in small batches for the best quality.</p>
-  </section>
-  <div class="shop-filter">
-    <button class="filter-btn active" data-filter="all">All Soaps</button>
-    <button class="filter-btn" data-filter="ocean">Ocean</button>
-    <button class="filter-btn" data-filter="love">Love</button>
-    <button class="filter-btn" data-filter="fruit">Fruit</button>
-    <button class="filter-btn" data-filter="premium">Premium</button>
-    <button class="filter-btn" data-filter="botanical">Botanical</button>
-    <button class="filter-btn" data-filter="wellness">Wellness</button>
-  </div>
-  <div class="shop-grid-wrap">
-    <div class="shop-grid" id="shopGrid"></div>
-  </div>
-  <div id="shopFooter"></div>
-</div>
+<!-- SHOP PAGE REMOVED -->
 
 <!-- ═══════════════ ABOUT PAGE ═══════════════ -->
 <div class="page" id="page-about">
@@ -402,58 +340,35 @@
     <p class="reveal d2" style="font-size:0.88rem;color:var(--text-mid);line-height:1.9;max-width:480px;margin:1rem auto 0">Whether you have a question about our soaps, want to book a class, or explore wholesale. We're here.</p>
   </section>
   <section class="contact-inner">
-    <div class="contact-grid">
-      <div>
-        <p class="sec-eyebrow reveal">— Find Us</p>
-        <h2 class="sec-title sec-title-sm reveal d1" style="margin-bottom:2.5rem">Say <em>Hello.</em></h2>
-        <div class="contact-info-item reveal d2">
-          <span class="ci-icon">📍</span>
-          <div><div class="ci-label">Location</div><div class="ci-val">Bhavani, Tamil Nadu, India<br>Available for pickup & local delivery</div></div>
-        </div>
-        <div class="contact-info-item reveal d3">
-          <span class="ci-icon">📧</span>
-          <div><div class="ci-label">Email</div><div class="ci-val">hello@cocoglo.in</div></div>
-        </div>
-        <div class="contact-info-item reveal d4">
-          <span class="ci-icon">📱</span>
-          <div><div class="ci-label">Phone / WhatsApp</div><div class="ci-val">+91 97895 60316</div></div>
-        </div>
-        <div class="contact-info-item reveal d5">
-          <span class="ci-icon">🕐</span>
-          <div><div class="ci-label">Workshop Hours</div><div class="ci-val">Monday–Sunday: 10am – 6pm</div></div>
-        </div>
-        <div class="contact-social reveal d5">
-          <a href="https://www.instagram.com/cocoglo.in/" class="soc-btn">ig</a>
-        </div>
-      </div>
-      <div class="contact-form-card reveal d2">
-        <div class="contact-form-title">Send a Message</div>
-        <p class="contact-form-sub">We typically respond within 24 hours.</p>
-        <form id="contactFormEl">
-          <div class="form-row">
-            <div class="form-group"><label class="form-label">First Name</label><input class="form-input" type="text" required placeholder="Priya"></div>
-            <div class="form-group"><label class="form-label">Last Name</label><input class="form-input" type="text" required placeholder="Sharma"></div>
+    <div class="contact-featured">
+      <div class="cf-card reveal d1">
+        <h2 class="sec-title sec-title-sm">Say <em>Hello.</em></h2>
+        <p style="color:var(--text-light);font-size:0.9rem;margin-top:1rem;margin-bottom:2.5rem;max-width:380px">We're here to help with your workshop bookings, wholesale inquiries, or just to talk about natural soaps.</p>
+        
+        <div class="contact-info-list">
+          <div class="ci-item reveal d2">
+            <span class="ci-icon">📍</span>
+            <div><div class="ci-label">Location</div><div class="ci-val">Bhavani, Tamil Nadu, India</div></div>
           </div>
-          <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" required placeholder="you@email.com"></div>
-          <div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel" placeholder="+91 98765 43210"></div>
-          <div class="form-group">
-            <label class="form-label">Inquiry Type</label>
-            <select class="form-select">
-              <option>General Inquiry</option>
-              <option>Product / Order</option>
-              <option>Class Booking</option>
-              <option>Wholesale / Bulk</option>
-              <option>Corporate Event</option>
-              <option>Custom Soap Order</option>
-            </select>
+          <div class="ci-item reveal d3">
+            <span class="ci-icon">📧</span>
+            <div><div class="ci-label">Email</div><div class="ci-val">hello@cocoglo.in</div></div>
           </div>
-          <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" required placeholder="Tell us how we can help you..."></textarea></div>
-          <button type="submit" class="form-submit">Send Message ✦</button>
-        </form>
-        <div class="form-success" id="contactSuccess">
-          <div class="form-success-icon">🌸</div>
-          <div class="form-success-msg">Message Sent!</div>
-          <p style="font-size:0.82rem;color:var(--text-light);margin-top:0.7rem">Thank you for reaching out! We'll get back to you within 24 hours.</p>
+          <div class="ci-item reveal d4">
+            <span class="ci-icon">🕐</span>
+            <div><div class="ci-label">Workshop Hours</div><div class="ci-val">Monday–Sunday: 10am – 6pm</div></div>
+          </div>
+        </div>
+
+        <div class="contact-wa-box reveal d5">
+          <p style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:1.5rem">Primary Contact</p>
+          <button class="btn-wa-lg" onclick="contactWA('nav')">
+            <span>Chat on WhatsApp</span>
+            <span class="wa-number">+91 97895 60316</span>
+          </button>
+          <div class="contact-social-alt">
+             <a href="https://www.instagram.com/cocoglo.in/" target="_blank" class="soc-link-alt"><span>Follow on Instagram</span> →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -470,36 +385,34 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand-name">COCOGLO</div>
-        <p class="footer-brand-desc">Handcrafted artisan soaps and soap-making workshops rooted in nature, crafted with love.</p>
+        <p class="footer-brand-desc">Handcrafted artisan soaps and soap-making workshops rooted in nature, crafted with love in Bhavani, Tamil Nadu.</p>
         <div class="footer-social">
-          <a href="#" class="fsoc">ig</a><a href="#" class="fsoc">fb</a><a href="#" class="fsoc">yt</a><a href="#" class="fsoc">wa</a>
+          <a href="https://www.instagram.com/cocoglo.in/" target="_blank" class="fsoc">ig</a>
+          <a onclick="contactWA('nav')" class="fsoc" style="cursor:pointer">wa</a>
         </div>
       </div>
       <div>
-        <p class="footer-col-title">Shop</p>
+        <p class="footer-col-title">COCOGLO</p>
         <ul class="footer-links">
-          <li><a onclick="navigate('shop')">All Soaps</a></li>
-          <li><a onclick="navigate('shop')">Gift Sets</a></li>
-          <li><a onclick="navigate('shop')">Ocean Collection</a></li>
-          <li><a onclick="navigate('shop')">Seasonal Picks</a></li>
+          <li><a onclick="navigate('home')">Home</a></li>
+          <li><a onclick="navigate('about')">Our Story</a></li>
+          <li><a onclick="navigate('contact')">Contact Us</a></li>
         </ul>
       </div>
       <div>
         <p class="footer-col-title">Learn</p>
         <ul class="footer-links">
-          <li><a onclick="navigate('classes')">Beginner Classes</a></li>
-          <li><a onclick="navigate('classes')">Advanced Workshops</a></li>
-          <li><a onclick="navigate('classes')">Corporate Events</a></li>
-          <li><a onclick="navigate('classes')">Class Schedule</a></li>
+          <li><a onclick="navigate('classes')">Online Basics</a></li>
+          <li><a onclick="navigate('classes')">In-Person Workshops</a></li>
+          <li><a onclick="navigate('classes')">Artisan Designing</a></li>
         </ul>
       </div>
       <div>
-        <p class="footer-col-title">Company</p>
+        <p class="footer-col-title">Contact</p>
         <ul class="footer-links">
-          <li><a onclick="navigate('about')">About Us</a></li>
-          <li><a onclick="navigate('contact')">Contact</a></li>
-          <li><a>Shipping Policy</a></li>
-          <li><a>Returns</a></li>
+          <li><a href="https://wa.me/919789560316" target="_blank">+91 97895 60316</a></li>
+          <li><a href="mailto:hello@cocoglo.in">hello@cocoglo.in</a></li>
+          <li><a onclick="navigate('contact')">Bhavani, Tamil Nadu</a></li>
         </ul>
       </div>
     </div>
@@ -515,16 +428,17 @@
 <!-- External Scripts -->
 <script src="scripts.js"></script>
 <script>
-  setTimeout(()=>t.classList.remove('show'),3000);
+  const t = document.getElementById('toast');
+  if(t) setTimeout(()=>t.classList.remove('show'),3000);
 
 // ─── INJECT LOGO IMAGES ───
 document.querySelectorAll('[data-logo]').forEach(img=>img.src=IMG_LOGO);
 
 // ─── INIT ───
 navigate('home');
-document.getElementById('hp1').src = IMG_TURQUOISE;
-document.getElementById('hp2').src = IMG_HEARTS;
-document.getElementById('hp3').src = IMG_DRAGON;
+document.getElementById('hp1') && (document.getElementById('hp1').src = IMG_TURQUOISE);
+document.getElementById('hp2') && (document.getElementById('hp2').src = IMG_HEARTS);
+document.getElementById('hp3') && (document.getElementById('hp3').src = IMG_DRAGON);
 document.getElementById('aboutImg1').src = IMG_TURQUOISE;
 document.getElementById('aboutImg2').src = IMG_DRAGON;
 // Inject footers
