@@ -63,12 +63,8 @@ function navigate(id){
   const navbarEl = document.getElementById('navbar');
   if(id === 'classes') {
     navbarEl.classList.add('dark-bg');
-    const logoImg = document.querySelector('.nav-logo img');
-    if(logoImg) logoImg.style.filter = 'brightness(0) invert(1)';
   } else {
     navbarEl.classList.remove('dark-bg');
-    const logoImg = document.querySelector('.nav-logo img');
-    if(logoImg) logoImg.style.filter = 'none';
   }
 
   document.querySelectorAll('[data-nav]').forEach(a=>{
@@ -77,6 +73,20 @@ function navigate(id){
   initReveal();
   if(id==='shop') renderShop();
   if(id==='classes') renderClasses();
+}
+
+// ─── WHATSAPP CONTACT ───
+function contactWA(type, extra = '') {
+  const phone = '919789560316';
+  const messages = {
+    'nav': "Hi COCOGLO! I'm interested in booking a soap-making class. Could you share the available schedule?",
+    'hero': "Hi! I saw your soap-making workshops on the home page and would like to learn more.",
+    'about': "Hello! I'm interested in joining a COCOGLO workshop after reading your story. How can I register?",
+    'secure': "Hi COCOGLO! I want to secure my place in your next natural skincare workshop.",
+    'class': `Hi! I'd like to book the "${extra}" workshop. Is there an upcoming slot for this?`
+  };
+  const text = messages[type] || messages['nav'];
+  window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 }
 
 // ─── NAVBAR ───
@@ -208,18 +218,14 @@ function renderShop(filter='all'){
 
 // ─── CLASSES DATA ───
 const CLASSES = [
-  {id:1,name:'Melt & Pour Magic',cat:'beginner',level:'Beginner',duration:'3 hrs',size:'8 ppl',price:1200,color:'#5BBFB5',emoji:'🌿',
-   desc:'Perfect introduction to soap making. Learn the basics of melt and pour technique, fragrance blending, and mold filling. Take home 6 beautiful soaps.'},
-  {id:2,name:'Cold Process Mastery',cat:'intermediate',level:'Intermediate',duration:'5 hrs',size:'6 ppl',price:2200,color:'#C4973A',emoji:'🧪',
-   desc:'Dive deep into saponification science. Create layered, swirled and textured bars using lye-based cold process — the gold standard of soap crafting.'},
-  {id:3,name:'Artistic Soap Design',cat:'advanced',level:'Advanced',duration:'6 hrs',size:'5 ppl',price:2800,color:'#1D3A1F',emoji:'🎨',
-   desc:'Master swirls, layers, embeds, and mica painting. Create soap bars that are works of art. Explore gradient pours and advanced color techniques.'},
-  {id:4,name:'Corporate Wellness',cat:'corporate',level:'Corporate',duration:'3 hrs',size:'20 ppl',price:8500,color:'#C0394B',emoji:'🏢',
-   desc:'Unique team-building experience. Customizable themes and branding available. Perfect for company off-sites, client events, and wellness days.'},
-  {id:5,name:'Natural Shampoo Bar',cat:'intermediate',level:'Intermediate',duration:'4 hrs',size:'6 ppl',price:1900,color:'#C4973A',emoji:'🌾',
-   desc:'Create sulfate-free solid shampoo bars with nourishing botanicals, essential oils, and hair-loving ingredients for every hair type.'},
-  {id:6,name:'Kids Soap Safari',cat:'beginner',level:'Beginner',duration:'2 hrs',size:'10 ppl',price:900,color:'#5BBFB5',emoji:'🐾',
-   desc:'Fun-filled soap making session designed for children aged 8–14. Safe, non-lye process with vibrant colors, fun molds, and gentle fragrances.'},
+  {id:1,name:'Online Cold Process Basics (self-supplied materials)',cat:'beginner',level:'Beginner',duration:'2 days',size:'12 ppl',price:1500,color:'#5BBFB5',emoji:'🌿',
+   desc:'Learn the fundamentals of cold process soap making using a standard oil recipe. Understand how safely to work with lye, calculate lye quantities on your own, and master essential techniques like mixing, tracing, and pouring. Materials are not included—after booking, a shopping link will be provided to help you source all required ingredients and equipment easily.'},
+  {id:2,name:'In-Person Cold Process Basics',cat:'beginner',level:'Beginner',duration:'2 days',size:'10 ppl',price:2500,color:'#C4973A',emoji:'🧪',
+   desc:'Walk in empty-handed and dive into the art of cold process soap making. Learn to work confidently with lye, create your own calculations, and master mixing, tracing, and pouring—then head home with 8 beautiful, handcrafted soap bars made by you.'},
+  {id:3,name:'Online Artisan Soap Design',cat:'advanced',level:'Advanced',duration:'2 days',size:'10 ppl',price:3000,color:'#1D3A1F',emoji:'🎨',
+   desc:'Join us online and create your own soap slab from home in a live Zoom session. Learn the science and techniques of cold-process soapmaking step by step. After booking, you’ll receive a curated list of affordable, reliable vendors on WhatsApp within 24–48 hours to source all required materials and equipment.'},
+  {id:4,name:'In-Person Artisan Soap Designing',cat:'advanced',level:'Advanced',duration:'2 days',size:'10 ppl',price:4500,color:'#C0394B',emoji:'✨',
+   desc:'Come empty-handed and immerse yourself in the art of cold process soap making. Play with colours and scents of your choice, create your own custom soap, and walk away with 10 stunning handmade soap bars.'},
 ];
 
 function renderClasses(filter='all'){
@@ -240,30 +246,11 @@ function renderClasses(filter='all'){
         </div>
         <div class="class-card-foot">
           <span class="class-price">₹${c.price.toLocaleString()}</span>
-          <button class="book-btn" onclick="openBookingModal(${c.id},'${c.name}',${c.price})">Book Now</button>
+          <button class="book-btn" onclick="contactWA('class', '${c.name}')">Book Now</button>
         </div>
       </div>
     </div>`).join('');
   initReveal();
-}
-
-// ─── BOOKING MODAL ───
-function openBookingModal(id,name,price){
-  document.getElementById('modalClassName').textContent=name;
-  document.getElementById('modalClassPrice').textContent='₹'+price.toLocaleString();
-  document.getElementById('bookingModal').classList.add('open');
-  document.getElementById('bookingSuccess').style.display='none';
-  document.getElementById('bookingFormEl').style.display='block';
-}
-function closeBookingModal(){
-  document.getElementById('bookingModal').classList.remove('open');
-}
-if(document.getElementById('bookingFormEl')) {
-  document.getElementById('bookingFormEl').addEventListener('submit',e=>{
-    e.preventDefault();
-    document.getElementById('bookingFormEl').style.display='none';
-    document.getElementById('bookingSuccess').style.display='block';
-  });
 }
 
 // ─── CONTACT FORM ───

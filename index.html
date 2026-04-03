@@ -41,13 +41,12 @@
     "description": "Handcrafted artisan soaps and soap-making workshops rooted in nature.",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
+      "addressLocality": "Bhavani",
+      "addressRegion": "Tamil Nadu",
       "addressCountry": "India"
     },
     "sameAs": [
-      "https://www.instagram.com/cocoglo",
-      "https://www.facebook.com/cocoglo"
+      "https://www.instagram.com/cocoglo.in",
     ]
   }
   </script>
@@ -84,60 +83,17 @@
   </div>
 </div> -->
 
-<!-- BOOKING MODAL -->
-<div class="modal-overlay" id="bookingModal">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeBookingModal()">✕</button>
-    <h2 class="modal-title">Book Your Seat</h2>
-    <p class="modal-sub"><strong id="modalClassName"></strong> — <span id="modalClassPrice"></span> per person</p>
-    <form id="bookingFormEl">
-      <div class="form-row">
-        <div class="form-group"><label class="form-label">First Name</label><input class="form-input" type="text" required placeholder="Priya"></div>
-        <div class="form-group"><label class="form-label">Last Name</label><input class="form-input" type="text" required placeholder="Sharma"></div>
-      </div>
-      <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" required placeholder="you@email.com"></div>
-      <div class="form-group"><label class="form-label">Phone Number</label><input class="form-input" type="tel" required placeholder="+91 98765 43210"></div>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Preferred Date</label>
-          <input class="form-input" type="date" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label">No. of Participants</label>
-          <select class="form-select">
-            <option>1 person</option><option>2 people</option><option>3 people</option><option>4 people</option><option>5+ people</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group"><label class="form-label">Special Requests</label><textarea class="form-textarea" placeholder="Any allergies, dietary needs, or special requests..."></textarea></div>
-      <button type="submit" class="form-submit">Confirm Booking ✦</button>
-    </form>
-    <div class="form-success" id="bookingSuccess">
-      <div class="form-success-icon">🌿</div>
-      <div class="form-success-msg">Booking Confirmed!</div>
-      <p style="font-size:0.82rem;color:var(--text-light);margin-top:0.7rem">We'll send a confirmation email shortly. See you at the workshop!</p>
-    </div>
-  </div>
-</div>
-
 <!-- NAVBAR -->
 <nav id="navbar">
   <a class="nav-logo" onclick="navigate('home')" style="cursor:pointer">
     <img src="./assets/logo.png" alt="COCOGLO">
-    <span class="nav-logo-text">COCOGLO</span>
   </a>
   <ul class="nav-menu" id="navMenu">
     <li><a data-nav="home" onclick="navigate('home')">Home</a></li>
     <li><a data-nav="classes" onclick="navigate('classes')">Classes</a></li>
     <li><a data-nav="about" onclick="navigate('about')">About</a></li>
     <li><a data-nav="contact" onclick="navigate('contact')">Contact</a></li>
-    <!-- <li>
-      <a onclick="openCart()" style="cursor:pointer" class="cart-icon">
-        🛒
-        <span class="cart-badge" id="cartBadge" style="display:none">0</span>
-      </a>
-    </li> -->
-    <li><a class="nav-cta-btn" onclick="navigate('classes')">Book a Class</a></li>
+    <li><a class="nav-cta-btn" onclick="contactWA('nav')">Book a Class</a></li>
   </ul>
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
@@ -152,19 +108,18 @@
     <div class="hero-grain"></div>
     <div class="hero-inner">
       <div class="hero-text">
-        <div class="hero-eyebrow">✦ Thoughtfully Made · Naturally Luxe</div>
+        <div class="hero-eyebrow">✦ Thoughtfully Made ✦ Naturally Luxe</div>
         <h1 class="hero-h1">Pure Skin<br><em>From Nature</em><br>Within.</h1>
-        <p class="hero-p">Cold process artisan soaps made with coconut oils and botanical blends — thoughtfully handcrafted and cured to perfection for skin that deserves nothing but the best.</p>
+        <p class="hero-p">Cold process artisan soaps made with coconut oils and botanical blends thoughtfully handcrafted and cured to perfection for skin that deserves nothing but the best.</p>
         <div class="hero-actions">
-          <button class="btn btn-dark" onclick="navigate('shop')">Shop Collection</button>
-          <button class="btn btn-gold-outline" onclick="navigate('classes')">Learn Soap-Making</button>
+          <button class="btn btn-dark" onclick="contactWA('hero')">Learn Soap-Making</button>
         </div>
       </div>
       <div class="hero-visual">
         <div class="soap-3d-stage" id="soapStage">
-          <div class="soap-float sf1"><img id="heroImg1" src="./assets/soap1.png" alt="Turquoise soap"></div>
-          <div class="soap-float sf2"><img id="heroImg2" alt="Heart soap"></div>
-          <div class="soap-float sf3"><img id="heroImg3" alt="Dragon fruit soap"></div>
+          <div class="soap-float sf1"><img src="./assets/soap1.png" alt="Turquoise soap"></div>
+          <div class="soap-float sf2"><img src="./assets/soap2.png"alt="Heart soap"></div>
+          <div class="soap-float sf3"><img src="./assets/soap3.png" alt="Dragon fruit soap"></div>
         </div>
       </div>
     </div>
@@ -180,7 +135,7 @@
       <span class="ticker-item">Soap-Making Classes</span><span class="ticker-dot">✦</span>
       <span class="ticker-item">Skin-loving formulations</span><span class="ticker-dot">✦</span>
       <span class="ticker-item">Crafted, not manufactured</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Handcrafted Soaps</span><span class="ticker-dot">✦</span>
+      <span class="ticker-item">Handcrafted Soaps</span><span class="ticker-dot">✦</span>
       <span class="ticker-item">Cold Process Method</span><span class="ticker-dot">✦</span>
       <span class="ticker-item">All-Natural Ingredients</span><span class="ticker-dot">✦</span>
       <span class="ticker-item">Soap-Making Classes</span><span class="ticker-dot">✦</span>
@@ -225,7 +180,7 @@
           <div class="prod-body">
             <p class="prod-tag">Ocean Series</p>
             <h3 class="prod-name">Turquoise Tide</h3>
-            <p class="prod-desc">Sea minerals & coconut oil with gold mica layers — a luxurious, calming experience.</p>
+            <p class="prod-desc">Sea minerals & coconut oil with gold mica layers a luxurious, calming experience.</p>
             <div class="prod-foot"><span class="prod-price">₹420</span><button class="prod-add" onclick="addToCart(1,'Turquoise Tide',420)">Add to Cart</button></div>
           </div>
         </div>
@@ -258,7 +213,7 @@
       <div class="workshop-text">
         <p class="sec-eyebrow reveal">— Soap-Making Classes</p>
         <h2 class="sec-title reveal d1">Craft Your<br><em>Own Soap.</em></h2>
-        <p class="ws-p reveal d2">Learn the art of cold process soap making from scratch — from oils to finished bars.Small batches, expert guidance, and a truly hands-on experience.</p>
+        <p class="ws-p reveal d2">Learn the art of cold process soap making from scratch from oils to finished bars.Small batches, expert guidance, and a truly hands-on experience.</p>
         <button class="btn btn-gold reveal d3" onclick="navigate('classes')">Explore All Classes →</button>
         <div class="ws-stats" style="display: none;">
           <div class="ws-stat reveal d1"><div class="ws-stat-num">500+</div><div class="ws-stat-label">Soaps Created</div></div>
@@ -266,11 +221,11 @@
           <div class="ws-stat reveal d3"><div class="ws-stat-num">6</div><div class="ws-stat-label">Class Types</div></div>
         </div>
       </div>
-      <div class="ws-grid-cards" >
-        <div class="ws-gc reveal d1" style="display: none;"><div class="ws-gc-icon">🌿</div><div class="ws-gc-name">Beginner</div><div class="ws-gc-text">Melt & pour technique. Perfect starting point. Take home 6 soaps.</div></div>
-        <div class="ws-gc reveal d2" style="display: none;"><div class="ws-gc-icon">🧪</div><div class="ws-gc-name">Cold Process</div><div class="ws-gc-text">Full saponification science. Master the original craft.</div></div>
-        <div class="ws-gc reveal d3"><div class="ws-gc-icon">🎨</div><div class="ws-gc-name">Artistic Design</div><div class="ws-gc-text">Swirls, layers, embeds & mica art techniques.</div></div>
-        <div class="ws-gc reveal d4" style="display: none;"><div class="ws-gc-icon">🏢</div><div class="ws-gc-name">Corporate</div><div class="ws-gc-text">Team-building sessions with custom branding.</div></div>
+      <div class="ws-grid-cards">
+        <div class="ws-gc reveal d1"><div class="ws-gc-icon">🌿</div><div class="ws-gc-name">Online Basics</div><div class="ws-gc-text">Learn cold process fundamentals from home with lye safety & calculations.</div></div>
+        <div class="ws-gc reveal d2"><div class="ws-gc-icon">🧪</div><div class="ws-gc-name">In-Person Basics</div><div class="ws-gc-text">Dive into the art. All materials provided. Head home with 8 handcrafted bars.</div></div>
+        <div class="ws-gc reveal d3"><div class="ws-gc-icon">🎨</div><div class="ws-gc-name">Online Design</div><div class="ws-gc-text">Advanced artisan design via Zoom. Learn science & techniques step-by-step.</div></div>
+        <div class="ws-gc reveal d4"><div class="ws-gc-icon">✨</div><div class="ws-gc-name">In-Person Design</div><div class="ws-gc-text">Creative immersion. Custom colors & scents. Take home 10 stunning bars.</div></div>
       </div>
     </div>
   </section>
@@ -286,17 +241,17 @@
         <div class="tcard reveal d1">
           <div class="tcard-quote">"</div>
           <p class="tcard-text">I absolutely enjoyed this soap making class. The instructor explained everything clearly, from oils to curing, and made the whole process fun and stress-free. Highly recommended for beginners!</p>
-          <div class="tcard-auth"><div class="tcard-ava">P</div><div><div class="tcard-name">Shreepradha</div><div class="tcard-stars">★★★★★</div></div></div>
+          <div class="tcard-auth"><div class="tcard-ava">S</div><div><div class="tcard-name">Shreepradha</div><div class="tcard-stars">★★★★★</div></div></div>
         </div>
         <div class="tcard reveal d2">
           <div class="tcard-quote">"</div>
           <p class="tcard-text">Had such a great time at this workshop! It was creative, relaxing, and very informative. I never thought soap making could be this easy and enjoyable.</p>
-          <div class="tcard-auth"><div class="tcard-ava">A</div><div><div class="tcard-name">Saranya Deepak</div><div class="tcard-stars">★★★★★</div></div></div>
+          <div class="tcard-auth"><div class="tcard-ava">S</div><div><div class="tcard-name">Saranya Deepak</div><div class="tcard-stars">★★★★★</div></div></div>
         </div>
         <div class="tcard reveal d3">
           <div class="tcard-quote">"</div>
           <p class="tcard-text">Beautifully made soaps! They look premium and work even better. My skin has never felt this good with regular soaps.</p>
-          <div class="tcard-auth"><div class="tcard-ava">M</div><div><div class="tcard-name">Nithya</div><div class="tcard-stars">★★★★★</div></div></div>
+          <div class="tcard-auth"><div class="tcard-ava">N</div><div><div class="tcard-name">Nithya</div><div class="tcard-stars">★★★★★</div></div></div>
         </div>
       </div>
     </div>
@@ -308,10 +263,9 @@
     <div style="position:relative;z-index:1;max-width:600px;margin:0 auto">
       <p class="sec-eyebrow reveal">— Join the Glow Circle</p>
       <h2 class="sec-title reveal d1">Stay connected<br><em>with COCOGLO.</em></h2>
-      <p class="reveal d2" style="font-size:0.88rem;color:var(--text-mid);line-height:1.9;margin:1.2rem 0 2rem">Get early access to new collections, exclusive workshop invites, and natural skincare tips in your inbox.</p>
-      <div class="reveal d3" style="display:flex;max-width:420px;margin:0 auto">
-        <input type="email" id="nlEmail" style="flex:1;padding:0.95rem 1.2rem;border:1px solid rgba(196,151,58,0.3);background:var(--white);font-family:'Jost',sans-serif;font-size:0.85rem;outline:none" placeholder="your@email.com">
-        <button style="background:var(--green-dark);color:var(--cream);padding:0.95rem 1.5rem;border:none;cursor:pointer;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-family:'Jost',sans-serif;transition:background 0.3s" onmouseover="this.style.background='var(--gold)'" onmouseout="this.style.background='var(--green-dark)'" onclick="showToast('✨ Welcome to the Glow Circle!')">Subscribe</button>
+      <p class="reveal d2" style="font-size:0.88rem;color:var(--text-mid);line-height:1.9;margin:1.2rem 0 2rem">Step into the world of natural skincare with our exclusive COCOGLO workshops.</p>
+      <div class="reveal d3" style="display:flex;max-width:420px;margin:0 auto;justify-content: center;">
+        <button style="background:var(--green-dark);color:var(--cream);padding:0.95rem 1.5rem;border:none;cursor:pointer;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;font-family:'Jost',sans-serif;transition:background 0.3s" onmouseover="this.style.background='var(--gold)'" onmouseout="this.style.background='var(--green-dark)'" onclick="contactWA('secure')">Secure your place</button>
       </div>
     </div>
   </section>
@@ -349,8 +303,10 @@
       <div>
         <p class="sec-eyebrow reveal">— Our Story</p>
         <h2 class="sec-title reveal d1" style="font-size:clamp(2.5rem,4.5vw,4.5rem)">Made with<br><em>love, coconut</em><br>& craft.</h2>
-        <p class="reveal d2" style="font-size:0.9rem;color:var(--text-mid);line-height:1.95;max-width:460px;margin:1.5rem 0 2rem">COCOGLO was born from a passion for clean beauty and the healing power of natural ingredients. We believe skincare should be honest, sustainable, and deeply nourishing.</p>
-        <button class="btn btn-dark reveal d3" onclick="navigate('shop')">Shop Our Soaps</button>
+        <p class="reveal d2" style="font-size:0.9rem;color:var(--text-mid);line-height:1.95;max-width:460px;margin:1.5rem 0 2rem">COCOGLO was born from a passion for clean beauty and the healing power of natural ingredients. 
+          We believe skincare should be honest, sustainable, and deeply nourishing.
+          Our workshops are an extension of this philosophy hands-on experiences where you learn to create and understand natural skincare using pure, thoughtfully chosen ingredients. Each session is designed to help you connect with your skin, simplify your routine, and build confidence in what you use every day.</p>
+        <button class="btn btn-dark reveal d3" onclick="contactWA('about')">Book for Workshop</button>
       </div>
       <div>
         <div class="about-logo-circle reveal d2">
@@ -358,7 +314,7 @@
         </div>
         <div class="about-stat-cards" style="max-width:300px;margin:1.5rem auto 0">
           <div class="asc reveal d3"><span class="asc-num">500+</span><span class="asc-label">Soaps Handcrafted</span></div>
-          <div class="asc reveal d4"><span class="asc-num">200+</span><span class="asc-label">Workshop Students</span></div>
+          <div class="asc reveal d4"><span class="asc-num">25+</span><span class="asc-label">Workshop Students</span></div>
           <div class="asc reveal d5"><span class="asc-num">3+</span><span class="asc-label">Years of Crafting</span></div>
         </div>
       </div>
@@ -395,8 +351,8 @@
         </div>
       </div>
       <div class="story-img-stack reveal d2">
-        <div class="simg simg-1"><img id="aboutImg1" alt="COCOGLO soaps"></div>
-        <div class="simg simg-2"><img id="aboutImg2" alt="COCOGLO soaps"></div>
+        <div class="simg simg-1"><img src="/assets/about2.png" alt="COCOGLO soaps"></div>
+        <div class="simg simg-2"><img src="/assets/about.png" alt="COCOGLO soaps"></div>
       </div>
     </div>
   </section>
@@ -409,16 +365,14 @@
     <div style="position:relative;z-index:1">
       <p class="sec-eyebrow reveal">— Soap-Making Workshops</p>
       <h2 class="sec-title reveal d1">Learn the <em>Art.</em><br>Master the Craft.</h2>
-      <p class="classes-hero-p reveal d2">Hands-on workshops for every skill level — from your first melt & pour to advanced cold process artistry. All materials included. Small groups, expert guidance.</p>
+      <p class="classes-hero-p reveal d2">Master the fundamentals and advanced techniques of cold process soap making. Whether online or in-person, join our expert-led sessions designed for every stage of your crafting journey.</p>
       <button class="btn btn-gold reveal d3" onclick="document.querySelector('.classes-section').scrollIntoView({behavior:'smooth'})">See All Classes ↓</button>
     </div>
   </section>
   <div class="class-cats">
     <button class="cat-btn active" data-cat="all">All Classes</button>
     <button class="cat-btn" data-cat="beginner">Beginner</button>
-    <button class="cat-btn" data-cat="intermediate">Intermediate</button>
     <button class="cat-btn" data-cat="advanced">Advanced</button>
-    <button class="cat-btn" data-cat="corporate">Corporate</button>
   </div>
   <section class="classes-section">
     <div class="classes-grid" id="classesGrid"></div>
@@ -445,7 +399,7 @@
   <section class="contact-hero">
     <p class="sec-eyebrow reveal">— Get in Touch</p>
     <h2 class="sec-title reveal d1" style="font-size:clamp(2.5rem,4vw,4.2rem)">We'd love to <em>hear from you.</em></h2>
-    <p class="reveal d2" style="font-size:0.88rem;color:var(--text-mid);line-height:1.9;max-width:480px;margin:1rem auto 0">Whether you have a question about our soaps, want to book a class, or explore wholesale — we're here.</p>
+    <p class="reveal d2" style="font-size:0.88rem;color:var(--text-mid);line-height:1.9;max-width:480px;margin:1rem auto 0">Whether you have a question about our soaps, want to book a class, or explore wholesale. We're here.</p>
   </section>
   <section class="contact-inner">
     <div class="contact-grid">
@@ -454,25 +408,22 @@
         <h2 class="sec-title sec-title-sm reveal d1" style="margin-bottom:2.5rem">Say <em>Hello.</em></h2>
         <div class="contact-info-item reveal d2">
           <span class="ci-icon">📍</span>
-          <div><div class="ci-label">Location</div><div class="ci-val">Bengaluru, Karnataka, India<br>Available for pickup & local delivery</div></div>
+          <div><div class="ci-label">Location</div><div class="ci-val">Bhavani, Tamil Nadu, India<br>Available for pickup & local delivery</div></div>
         </div>
         <div class="contact-info-item reveal d3">
           <span class="ci-icon">📧</span>
-          <div><div class="ci-label">Email</div><div class="ci-val">hello@cocoglo.in<br>orders@cocoglo.in</div></div>
+          <div><div class="ci-label">Email</div><div class="ci-val">hello@cocoglo.in</div></div>
         </div>
         <div class="contact-info-item reveal d4">
           <span class="ci-icon">📱</span>
-          <div><div class="ci-label">Phone / WhatsApp</div><div class="ci-val">+91 98765 43210</div></div>
+          <div><div class="ci-label">Phone / WhatsApp</div><div class="ci-val">+91 97895 60316</div></div>
         </div>
         <div class="contact-info-item reveal d5">
           <span class="ci-icon">🕐</span>
-          <div><div class="ci-label">Workshop Hours</div><div class="ci-val">Tuesday–Sunday: 10am – 6pm<br>Closed Mondays</div></div>
+          <div><div class="ci-label">Workshop Hours</div><div class="ci-val">Monday–Sunday: 10am – 6pm</div></div>
         </div>
         <div class="contact-social reveal d5">
-          <a href="#" class="soc-btn">ig</a>
-          <a href="#" class="soc-btn">fb</a>
-          <a href="#" class="soc-btn">yt</a>
-          <a href="#" class="soc-btn">wa</a>
+          <a href="https://www.instagram.com/cocoglo.in/" class="soc-btn">ig</a>
         </div>
       </div>
       <div class="contact-form-card reveal d2">
@@ -553,7 +504,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 COCOGLO. All rights reserved. Made with <span class="footer-lotus">✦</span> and coconut oil.</p>
+      <p>© 2026 COCOGLO. All rights reserved. Made with <span class="footer-lotus">✦</span> and coconut oil.</p>
       <p>Privacy Policy · Terms of Service</p>
     </div>
   </div>
