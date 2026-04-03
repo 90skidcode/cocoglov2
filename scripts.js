@@ -58,6 +58,19 @@ function navigate(id){
   Object.values(pages).forEach(p=>p.classList.remove('active'));
   if(pages[id]) pages[id].classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
+  
+  // Navbar toggle for sections with dark backgrounds
+  const navbarEl = document.getElementById('navbar');
+  if(id === 'classes') {
+    navbarEl.classList.add('dark-bg');
+    const logoImg = document.querySelector('.nav-logo img');
+    if(logoImg) logoImg.style.filter = 'brightness(0) invert(1)';
+  } else {
+    navbarEl.classList.remove('dark-bg');
+    const logoImg = document.querySelector('.nav-logo img');
+    if(logoImg) logoImg.style.filter = 'none';
+  }
+
   document.querySelectorAll('[data-nav]').forEach(a=>{
     a.classList.toggle('active', a.dataset.nav===id);
   });
@@ -322,5 +335,20 @@ if(footerTemplate) {
   ['homeFooter','shopFooter','aboutFooter','classesFooter','contactFooter'].forEach(id=>{
     const el = document.getElementById(id);
     if(el) el.innerHTML = footerHTML;
+  });
+}
+
+// ─── BACK TO TOP ───
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTopBtn.classList.add('visible');
+  } else {
+    backToTopBtn.classList.remove('visible');
+  }
+});
+if(backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
