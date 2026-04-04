@@ -218,13 +218,13 @@ function renderShop(filter='all'){
 
 // ─── CLASSES DATA ───
 const CLASSES = [
-  {id:1,name:'Online Cold Process Basics (self-supplied materials)',cat:'beginner',level:'Beginner',duration:'2 days',size:'12 ppl',price:1500,color:'#5BBFB5',emoji:'🌿',
+  {id:1,name:'Online Cold Process Basics (self-supplied materials)',cat:'beginner',level:'Beginner',duration:'2 days',size:'12 ppl',price:1500,color:'#5BBFB5',emoji:'🌿',img:'assets/Class1.png',
    desc:'Learn the fundamentals of cold process soap making using a standard oil recipe. Understand how safely to work with lye, calculate lye quantities on your own, and master essential techniques like mixing, tracing, and pouring. Materials are not included—after booking, a shopping link will be provided to help you source all required ingredients and equipment easily.'},
-  {id:2,name:'In-Person Cold Process Basics',cat:'beginner',level:'Beginner',duration:'2 days',size:'10 ppl',price:2500,color:'#C4973A',emoji:'🧪',
+  {id:2,name:'In-Person Cold Process Basics',cat:'beginner',level:'Beginner',duration:'2 days',size:'10 ppl',price:2500,color:'#C4973A',emoji:'🧪',img:'assets/Class2.png',
    desc:'Walk in empty-handed and dive into the art of cold process soap making. Learn to work confidently with lye, create your own calculations, and master mixing, tracing, and pouring—then head home with 8 beautiful, handcrafted soap bars made by you.'},
-  {id:3,name:'Online Artisan Soap Design',cat:'advanced',level:'Advanced',duration:'2 days',size:'10 ppl',price:3000,color:'#1D3A1F',emoji:'🎨',
+  {id:3,name:'Online Artisan Soap Design',cat:'advanced',level:'Advanced',duration:'2 days',size:'10 ppl',price:3000,color:'#1D3A1F',emoji:'🎨',img:'assets/soap2.png',
    desc:'Join us online and create your own soap slab from home in a live Zoom session. Learn the science and techniques of cold-process soapmaking step by step. After booking, you’ll receive a curated list of affordable, reliable vendors on WhatsApp within 24–48 hours to source all required materials and equipment.'},
-  {id:4,name:'In-Person Artisan Soap Designing',cat:'advanced',level:'Advanced',duration:'2 days',size:'10 ppl',price:4500,color:'#C0394B',emoji:'✨',
+  {id:4,name:'In-Person Artisan Soap Designing',cat:'advanced',level:'Advanced',duration:'2 days',size:'10 ppl',price:4500,color:'#C0394B',emoji:'✨',img:'assets/class4a.png',
    desc:'Come empty-handed and immerse yourself in the art of cold process soap making. Play with colours and scents of your choice, create your own custom soap, and walk away with 10 stunning handmade soap bars.'},
 ];
 
@@ -233,8 +233,8 @@ function renderClasses(filter='all'){
   const filtered = filter==='all'?CLASSES:CLASSES.filter(c=>c.cat===filter);
   grid.innerHTML = filtered.map(c=>`
     <div class="class-card reveal">
-      <div class="class-card-banner" style="background:linear-gradient(135deg,${c.color}22,${c.color}44)">
-        <span style="font-size:3.5rem">${c.emoji}</span>
+      <div class="class-card-banner">
+        <img src="${c.img}" alt="${c.name}" class="class-card-img" loading="lazy">
       </div>
       <div class="class-card-body">
         <span class="class-level level-${c.cat==='beginner'?'beg':c.cat==='intermediate'?'int':c.cat==='advanced'?'adv':'corp'}">${c.level}</span>
