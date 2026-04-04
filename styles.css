@@ -18,6 +18,7 @@
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; font-size:16px; }
 body { font-family:'Jost',sans-serif; background:var(--cream); color:var(--text); overflow-x:hidden; cursor:none; }
+img { max-width: 100%; height: auto; display: block; }
 
 /* CURSOR */
 #cursor { width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transition:transform 0.15s,background 0.2s; }
@@ -524,12 +525,24 @@ footer { background:var(--green-dark);padding:2rem 5% 2rem; }
   .nav-menu.mobile-open { display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(248,243,235,0.97);backdrop-filter:blur(12px);padding:1.5rem 5%;gap:1.2rem;border-bottom:1px solid rgba(196,151,58,0.15); }
   .nav-menu.mobile-open a { color: var(--green-dark) !important; }
   .nav-menu.mobile-open a.nav-cta-btn { color: #fff !important; }
-  .prod-grid,.classes-grid { grid-template-columns:1fr; }
+  .prod-grid,.classes-grid,.feature-cards { grid-template-columns:1fr; }
   .testi-grid { grid-template-columns:1fr; }
   .footer-grid { grid-template-columns:1fr; }
   .values-grid { grid-template-columns:1fr 1fr; }
   .ws-grid-cards { grid-template-columns:1fr; }
-  .hero-visual { display:none; }
+  .hero-visual { display:block; perspective:none; transform:scale(0.85); margin: 0 auto; width:100%; pointer-events:none; }
+  .soap-3d-stage { height: 340px; width: 100%; position: relative; overflow:visible; display: flex; justify-content: center; align-items: center; isolation: isolate; }
+  .soap-float { position: absolute !important; opacity: 1 !important; transform: none !important; visibility: visible !important; }
+  .sf1 { width:150px; height:150px; top: 0px; left: 50%; transform: translateX(-105%) !important; z-index: 3; }
+  .sf2 { width:120px; height:120px; top: 20px; left: 50%; transform: translateX(15%) !important; z-index: 2; }
+  .sf3 { width:140px; height:135px; bottom: 0px; left: 50%; transform: translateX(-45%) !important; z-index: 1; }
+  .soap-platform { width: 180px; height: 10px; bottom: -10px; left: 50%; transform: translateX(-50%); display:none; }
+
+  .story-inner { grid-template-columns:1fr; gap: 4rem; }
+  .story-img-stack { height: 320px; width: 90%; margin: 0 auto; }
+  .simg-1 { width: 62%; height: 60%; }
+  .simg-2 { width: 55%; height: 50%; }
+
   .form-row { grid-template-columns:1fr; }
   .cart-sidebar { width:100%;right:-100vw; }
   .cart-sidebar.open { right:0; }
