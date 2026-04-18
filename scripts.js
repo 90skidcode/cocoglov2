@@ -218,14 +218,85 @@ function renderShop(filter='all'){
 
 // ─── CLASSES DATA ───
 const CLASSES = [
-  {id:1,name:'Online Cold Process Basics (self-supplied materials)',cat:'beginner',level:'Beginner',duration:'2 days',size:'12 ppl',price:1500,color:'#5BBFB5',emoji:'🌿',img:'assets/Class1.png',
-   desc:'Learn the fundamentals of cold process soap making using a standard oil recipe. Understand how safely to work with lye, calculate lye quantities on your own, and master essential techniques like mixing, tracing, and pouring. Materials are not included—after booking, a shopping link will be provided to help you source all required ingredients and equipment easily.'},
-  {id:2,name:'In-Person Cold Process Basics',cat:'beginner',level:'Beginner',duration:'2 days',size:'10 ppl',price:2500,color:'#C4973A',emoji:'🧪',img:'assets/Class2.png',
-   desc:'Walk in empty-handed and dive into the art of cold process soap making. Learn to work confidently with lye, create your own calculations, and master mixing, tracing, and pouring—then head home with 8 beautiful, handcrafted soap bars made by you.'},
-  {id:3,name:'Online Artisan Soap Design',cat:'advanced',level:'Advanced',duration:'2 days',size:'10 ppl',price:3000,color:'#1D3A1F',emoji:'🎨',img:'assets/soap2.png',
-   desc:'Join us online and create your own soap slab from home in a live Zoom session. Learn the science and techniques of cold-process soapmaking step by step. After booking, you’ll receive a curated list of affordable, reliable vendors on WhatsApp within 24–48 hours to source all required materials and equipment.'},
-  {id:4,name:'In-Person Artisan Soap Designing',cat:'advanced',level:'Advanced',duration:'2 days',size:'10 ppl',price:4500,color:'#C0394B',emoji:'✨',img:'assets/class4a.png',
-   desc:'Come empty-handed and immerse yourself in the art of cold process soap making. Play with colours and scents of your choice, create your own custom soap, and walk away with 10 stunning handmade soap bars.'},
+{id:6,slug:'in-person-basic-soap-making.html',name:'In-Person Basic Soap Making Workshop',cat:'beginner',level:'Beginner',duration:'1 day',size:'5 ppl',price:2000,color:'#5BBFB5',emoji:'🌿',img:'assets/Class2.png',
+   format:'In-Person',
+   desc:'A fun, beginner-friendly 1-day workshop where you get hands-on experience with natural ingredients. Create your own handmade soaps using your choice of colours and scents — and take home 6 bars plus your mould!',
+   whatYoullLearn:[
+     'Basics of soap making and ingredients',
+     'Understanding oils, fragrances and additives',
+     'Safe handling of materials',
+     'Basic design and finishing techniques',
+     'Moulding and finishing your soaps',
+     'Choosing colours and scents',
+   ],
+   whoItsFor:'Perfect for complete beginners looking to start their soap-making journey. No prior experience needed — just bring your creativity!',
+   includes:[
+     'All equipment and materials provided at the studio',
+     '6 handmade soap bars and a mould to take home',
+     'Digital PDF guide with beginner-friendly instructions',
+     'Community access and post-workshop support',
+   ],
+   faqs:[
+     {q:'Do I need any experience?', a:'No experience at all! This is specifically designed for complete beginners.'},
+     {q:'What should I bring?', a:'Just yourself! All materials, equipment, and protective gear are fully provided.'},
+     {q:'Can I take my soaps home the same day?', a:'Yes! Your 6 soap bars will be ready to take home at the end of the session along with your mould.'},
+     {q:'When are the timings?', a:'Timings are customisable. Reach out via WhatsApp and we will schedule a session that suits you.'},
+   ],
+  },
+{id:5,slug:'in-person-advanced-soap-making.html',name:'In-Person Advanced Soap Making Workshop',cat:'advanced',level:'Advanced',duration:'2 days',size:'5 ppl',price:4500,color:'#5BBFB5',emoji:'🧪',img:'assets/soap2.png',
+   format:'In-Person',
+   desc:'Take your soap-making to the next level. Master saponification, lye calculations, oil blending, superfatting, and advanced design techniques in this immersive 2-day hands-on workshop in Komarapalayam.',
+   whatYoullLearn:[
+     'Saponification — how oils and lye form soap',
+     'Calculating correct lye amounts accurately',
+     'Choosing and balancing oils for skin benefits',
+     'Superfatting, water discounting and trace control',
+     'Use of specialty additives (clays, charcoal, milk)',
+     'Testing pH, hardness, lather and longevity',
+     'Curing, storage and shelf-life optimisation',
+     'Creating and customising your own soap batch',
+   ],
+   whoItsFor:'Designed for those who want to go beyond the basics. A basic understanding of soap making is recommended.',
+   includes:[
+     'All equipment and materials provided at the studio',
+     'Your own batch of handmade soaps',
+     'Detailed digital PDF guide with advanced notes and calculations',
+     'Community access and post-workshop support',
+   ],
+   faqs:[
+     {q:'Is this for beginners?', a:'This is an advanced workshop. A basic understanding of cold process is recommended. Consider our Cold Process Basics class first if you are new.'},
+     {q:'What do I need to bring?', a:'Just yourself! All materials, equipment, and protective gear are provided.'},
+     {q:'When are the dates?', a:'Dates are customisable. Reach out via WhatsApp and we will schedule a session that works for you.'},
+     {q:'How is my spot confirmed?', a:'Only upon completion of online payment. Limited to 5 participants per session.'},
+   ],
+  },
+{id:4,slug:'in-person-artisan-soap-designing.html',name:'In-Person Artisan Soap Designing',cat:'advanced',level:'Advanced',duration:'9 & 10 May',size:'5 ppl',price:3500,color:'#C0394B',emoji:'✨',img:'assets/class4a.png',
+   format:'In-Person',
+   desc:'Come empty-handed and immerse yourself in the art of cold process soap making. Play with colours and scents of your choice, create your own fully custom soap design, and walk away with 10 stunning handmade soap bars that are entirely yours.',
+   whatYoullLearn:[
+     'Advanced pigment and colorant techniques in cold process',
+     'Multiple swirl, layer, and embed design methods',
+     'Custom fragrance blending and scent anchoring',
+     'Creating signature textured and decorated tops',
+     'Cutting and finishing for a professional presentation',
+     'Building your own artisan recipe from scratch',
+   ],
+   whoItsFor:'For soap makers with some cold process experience who want to level up and create visually stunning, fully personalised bars. All materials are provided — you focus entirely on creativity.',
+   includes:[
+     'All materials, pigments, and fragrances provided',
+     '10 stunning handcrafted soap bars to take home',
+     'Advanced recipe and design guide PDF',
+     'Digital certificate of completion',
+     'Post-class WhatsApp support',
+   ],
+   faqs:[
+     {q:'Do I need prior soap-making experience?', a:'A basic understanding of cold process is required. We recommend completing the Cold Process Basics class first if you are new.'},
+     {q:'Can I pick my own colours and scents?', a:'Yes — on the day you\'ll choose from our curated palette of micas and fragrances to create a completely personal bar.'},
+     {q:'Where is the class held?', a:'In Bhavani, Tamil Nadu. Full address and directions are shared upon booking confirmation.'},
+     {q:'How many soaps will I take home?', a:'You\'ll take home 10 beautiful bars that you designed and made yourself over the two days.'},
+   ],
+  }
+
 ];
 
 function renderClasses(filter='all'){
@@ -233,7 +304,7 @@ function renderClasses(filter='all'){
   const filtered = filter==='all'?CLASSES:CLASSES.filter(c=>c.cat===filter);
   grid.innerHTML = filtered.map(c=>`
     <div class="class-card reveal">
-      <div class="class-card-banner">
+      <div class="class-card-banner" onclick="navigateToClass(${c.id})" style="cursor:pointer;">
         <img src="${c.img}" alt="${c.name}" class="class-card-img" loading="lazy">
       </div>
       <div class="class-card-body">
@@ -246,11 +317,27 @@ function renderClasses(filter='all'){
         </div>
         <div class="class-card-foot">
           <span class="class-price">₹${c.price.toLocaleString()}</span>
-          <button class="book-btn" onclick="contactWA('class', '${c.name}')">Book Now</button>
+          <div style="display:flex;gap:0.5rem;">
+            <button class="book-btn book-btn-outline" onclick="navigateToClass(${c.id})">Details →</button>
+            <button class="book-btn" onclick="contactWA('class', '${c.name}')">Book Now</button>
+          </div>
         </div>
       </div>
     </div>`).join('');
   initReveal();
+}
+
+// ─── CLASS DETAIL ───
+function navigateToClass(id) {
+  const cls = CLASSES.find(c => c.id === id);
+  if (!cls || !cls.slug) return;
+  window.location.href = cls.slug;
+}
+
+function toggleFAQ(el) {
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.cd-faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) el.classList.add('open');
 }
 
 // ─── CONTACT FORM ───
@@ -292,7 +379,9 @@ function showToast(msg){
 document.querySelectorAll('[data-logo]').forEach(img=>img.src=IMG_LOGO);
 
 // ─── INIT ───
-navigate('home');
+// Support ?page=X links from standalone class detail pages
+const _initPageParam = new URLSearchParams(window.location.search).get('page');
+navigate((_initPageParam && pages[_initPageParam]) ? _initPageParam : 'home');
 setTimeout(initReveal,200);
 
 // Inject real uploaded images
@@ -339,3 +428,5 @@ if(backToTopBtn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+

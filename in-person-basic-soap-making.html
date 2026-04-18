@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>In-Person Basic Soap Making Workshop | COCOGLO — 1-Day Experience</title>
+    <meta name="description" content="Beginner-friendly 1-day in-person soap making workshop at COCOGLO Studio, Komarapalayam. Make 6 handmade bars & take home your mould. All materials provided. ₹2,000. Max 5 participants." />
+    <meta name="keywords" content="beginner soap making workshop, 1 day soap class Tamil Nadu, soap making Komarapalayam, handmade soap workshop, COCOGLO beginner class" />
+    <meta name="author" content="COCOGLO" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://cocoglo.in/in-person-basic-soap-making.html" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cocoglo.in/in-person-basic-soap-making.html" />
+    <meta property="og:title" content="In-Person Basic Soap Making Workshop | COCOGLO" />
+    <meta property="og:description" content="1-day beginner soap making workshop in Komarapalayam. Take home 6 handmade bars + your mould. All materials included. ₹2,000." />
+    <meta property="og:image" content="https://cocoglo.in/assets/Class2.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="In-Person Basic Soap Making Workshop | COCOGLO" />
+    <meta property="twitter:description" content="Beginner 1-day soap making workshop — make 6 handmade bars and take home your mould." />
+    <meta property="twitter:image" content="https://cocoglo.in/assets/Class2.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..72,400..900&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .cd-venue-box { background: rgba(196,151,58,0.06); border-left: 3px solid var(--gold); padding: 1rem 1.3rem; border-radius: 0 6px 6px 0; margin-top: 1rem; }
+      .cd-venue-box p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.7; }
+      .cd-venue-box strong { color: var(--green-dark); }
+      .cd-spot-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(192,57,75,0.08); border: 1px solid rgba(192,57,75,0.25); color: #C0394B; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 30px; font-family: 'Jost', sans-serif; margin-bottom: 1rem; }
+      .cd-spot-badge::before { content: ''; width: 6px; height: 6px; background: #C0394B; border-radius: 50%; animation: pulse-dot 1.5s ease-in-out infinite; }
+      @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+      .cd-warning-box { background: rgba(196,151,58,0.06); border: 1px solid rgba(196,151,58,0.2); border-radius: 8px; padding: 1.2rem 1.4rem; margin-top: 1rem; }
+      .cd-warning-box p { font-size: 0.82rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 0.5rem; }
+      .cd-warning-box p:last-child { margin-bottom: 0; }
+      .cd-tba-chip { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(91,191,181,0.1); border: 1px solid rgba(91,191,181,0.3); color: var(--teal); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 30px; font-family: 'Jost', sans-serif; }
+      .cd-highlight-box { background: linear-gradient(135deg, rgba(91,191,181,0.08), rgba(196,151,58,0.06)); border: 1px solid rgba(91,191,181,0.2); border-radius: 8px; padding: 1.4rem 1.6rem; margin-top: 1rem; }
+      .cd-highlight-box p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.85; }
+    </style>
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <div id="cursorRing"></div>
+    <div class="toast" id="toast"></div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a class="nav-logo" href="index.html">
+        <img src="./assets/logo.png" alt="COCOGLO" />
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a data-nav="home" href="index.html">Home</a></li>
+        <li><a data-nav="classes" href="index.html?page=classes">Classes</a></li>
+        <li><a data-nav="about" href="index.html?page=about">About</a></li>
+        <li><a data-nav="contact" href="index.html?page=contact">Contact</a></li>
+        <li><a class="nav-cta-btn" onclick="contactWA('nav')" style="cursor:pointer;">Book a Class</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="cd-hero">
+      <div class="cd-hero-img" style="background-image: url('assets/Class2.png');"></div>
+      <div class="cd-hero-overlay"></div>
+      <div class="cd-hero-inner">
+        <a class="cd-back-btn" href="index.html?page=classes">← All Classes</a>
+        <span class="class-level level-beg" style="display:block;">Beginner · 1-Day Experience</span>
+        <h1 class="cd-title">In-Person Basic<br>Soap Making Workshop ✨</h1>
+        <div class="cd-hero-meta">
+          <span class="cd-meta-chip">⏱ 1 day</span>
+          <span class="cd-meta-chip">👥 Max 5 participants</span>
+          <span class="cd-meta-chip">📍 Komarapalayam</span>
+          <span class="cd-meta-chip">💰 ₹2,000</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="cd-main">
+      <div class="cd-main-inner section-wrap">
+
+        <!-- Left: Content -->
+        <div class="cd-content">
+
+          <!-- About -->
+          <div class="cd-block reveal">
+            <h2 class="cd-block-title">About This Workshop</h2>
+            <p class="cd-desc">Dive into a fun, beginner-friendly workshop where you'll get hands-on experience working with natural ingredients and learn the fundamentals of soap making. Perfect for anyone looking to start their soap-making journey — no prior experience needed!</p>
+            <p class="cd-desc" style="margin-top:1rem;">You will learn the basics, understand the process, and create your own handmade soaps using your choice of colours and scents. Your soaps will be ready to take home after the session.</p>
+          </div>
+
+          <!-- Schedule / Timing -->
+          <div class="cd-block reveal d1">
+            <h2 class="cd-block-title">Workshop Details</h2>
+            <div class="cd-highlight-box">
+              <p>This is a <strong>1-day hands-on session</strong> designed to introduce you to the art of soap making. You'll learn, create, and leave with your very own handmade soaps — all in a single session.</p>
+            </div>
+            <div style="margin-top:1.2rem;">
+              <span class="cd-tba-chip">⏰ Timings: To be announced</span>
+            </div>
+            <div class="cd-venue-box" style="margin-top:1rem;">
+              <p><strong>📍 Venue:</strong> Cocoglo Studio, Komarapalayam, Namakkal Dt – 638183</p>
+              <p style="margin-top:0.5rem;font-size:0.78rem;color:var(--text-light);">After booking, our team will contact you within 24–48 hours with complete details and share the Google Maps location.</p>
+            </div>
+          </div>
+
+          <!-- What you'll learn -->
+          <div class="cd-block reveal d2">
+            <h2 class="cd-block-title">What You'll Learn</h2>
+            <ul class="cd-learn-list">
+              <li>Basics of soap making</li>
+              <li>Understanding ingredients & their roles</li>
+              <li>Working with natural materials</li>
+              <li>Understanding oils, fragrances & additives</li>
+              <li>A simple beginner recipe</li>
+              <li>Safe handling of materials</li>
+              <li>Basic design techniques</li>
+              <li>Moulding and finishing your soaps</li>
+            </ul>
+          </div>
+
+          <!-- Design Process -->
+          <div class="cd-block reveal d3">
+            <h2 class="cd-block-title">🎨 Design Process</h2>
+            <p class="cd-desc">Explore your creativity by choosing your favourite colours and scents. Create simple yet beautiful soaps using the techniques learned during the session.</p>
+          </div>
+
+          <!-- What's included -->
+          <div class="cd-block reveal d3">
+            <h2 class="cd-block-title">What's Included</h2>
+            <ul class="cd-includes-list">
+              <li>All equipment and materials provided — just bring your creativity!</li>
+              <li>A set of 6 handmade soap bars along with a mould to take home</li>
+              <li>A digital PDF guide with notes and beginner-friendly instructions</li>
+              <li>A fun, creative, and relaxing experience</li>
+              <li>Access to our warm and inspiring community 🌿</li>
+            </ul>
+          </div>
+
+          <!-- FAQ -->
+          <div class="cd-block reveal d4">
+            <h2 class="cd-block-title">Frequently Asked Questions</h2>
+            <div class="cd-faq">
+              <div class="cd-faq-item" onclick="toggleFAQ(this)">
+                <div class="cd-faq-q">Do I need any prior experience?<span class="cd-faq-icon">+</span></div>
+                <div class="cd-faq-a">Not at all! This workshop is specifically designed for complete beginners. We guide you through every step from start to finish.</div>
+              </div>
+              <div class="cd-faq-item" onclick="toggleFAQ(this)">
+                <div class="cd-faq-q">What do I need to bring?<span class="cd-faq-icon">+</span></div>
+                <div class="cd-faq-a">Just yourself and your enthusiasm! All materials, equipment, and protective gear are fully provided at the studio.</div>
+              </div>
+              <div class="cd-faq-item" onclick="toggleFAQ(this)">
+                <div class="cd-faq-q">When are the timings?<span class="cd-faq-icon">+</span></div>
+                <div class="cd-faq-a">Timings are customisable. Reach out via WhatsApp and we'll work with you to schedule a session that fits your availability.</div>
+              </div>
+              <div class="cd-faq-item" onclick="toggleFAQ(this)">
+                <div class="cd-faq-q">Where is the venue?<span class="cd-faq-icon">+</span></div>
+                <div class="cd-faq-a">Cocoglo Studio, Komarapalayam, Namakkal District – 638183. The exact Google Maps location is shared within 24–48 hours of booking confirmation.</div>
+              </div>
+              <div class="cd-faq-item" onclick="toggleFAQ(this)">
+                <div class="cd-faq-q">Can I take my soaps home the same day?<span class="cd-faq-icon">+</span></div>
+                <div class="cd-faq-a">Yes! Your soaps will be ready to take home at the end of the session — 6 beautiful handmade bars plus your own mould.</div>
+              </div>
+              <div class="cd-faq-item" onclick="toggleFAQ(this)">
+                <div class="cd-faq-q">How is my spot confirmed?<span class="cd-faq-icon">+</span></div>
+                <div class="cd-faq-a">Your spot is confirmed only upon completion of online payment. Sessions are limited to 5 participants for a truly personalised experience.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Important Info -->
+          <div class="cd-block reveal d5">
+            <h2 class="cd-block-title">⚠️ Important Information</h2>
+            <div class="cd-warning-box">
+              <p>• Your spot will be confirmed <strong>only upon completion of online payment</strong>.</p>
+              <p>• The vendor list provided is a general reference, with suppliers delivering across India.</p>
+              <p>• We kindly request you to avoid asking for specific vendor sources — thank you for your understanding.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Booking sidebar -->
+        <aside class="cd-sidebar">
+          <div class="cd-book-card reveal">
+            <div class="cd-spot-badge">🔴 Only 5 spots</div>
+            <div class="cd-book-price">₹<span>2,000</span></div>
+            <div class="cd-book-format">In-Person · 1-Day Workshop</div>
+            <div class="cd-book-chips">
+              <span class="cd-meta-chip">⏱ 1 day</span>
+              <span class="cd-meta-chip">👥 Max 5 ppl</span>
+            </div>
+            <button class="btn btn-gold cd-book-btn" onclick="contactWA('class', 'In-Person Basic Soap Making Workshop')">Book This Class</button>
+            <p class="cd-book-note">Booking via WhatsApp. We'll confirm your slot within 24–48 hours.</p>
+            <div class="cd-book-divider"></div>
+            <div class="cd-book-incl">
+              <div class="cd-book-incl-title">Includes</div>
+              <ul>
+                <li>All equipment and materials provided</li>
+                <li>6 handmade soap bars + mould to take home</li>
+                <li>Digital PDF guide with beginner instructions</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-name">COCOGLO</div>
+            <p class="footer-brand-desc">Handcrafted artisan soaps and soap-making workshops rooted in nature, crafted with love in Bhavani, Tamil Nadu.</p>
+            <div class="footer-social">
+              <a href="https://www.instagram.com/cocoglo.in/" target="_blank" class="fsoc">ig</a>
+              <a onclick="contactWA('nav')" class="fsoc" style="cursor:pointer">wa</a>
+            </div>
+          </div>
+          <div>
+            <p class="footer-col-title">COCOGLO</p>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html?page=about">Our Story</a></li>
+              <li><a href="index.html?page=contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-col-title">Classes</p>
+            <ul class="footer-links">
+              <li><a href="online-cold-process-basics.html">Online Basics</a></li>
+              <li><a href="in-person-cold-process-basics.html">In-Person Basics</a></li>
+              <li><a href="in-person-basic-soap-making.html">Basic 1-Day</a></li>
+              <li><a href="online-artisan-soap-design.html">Online Design</a></li>
+              <li><a href="in-person-artisan-soap-designing.html">Artisan Designing</a></li>
+              <li><a href="in-person-advanced-soap-making.html">Advanced Workshop</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-col-title">Contact</p>
+            <ul class="footer-links">
+              <li><a href="https://wa.me/919789560316" target="_blank">+91 97895 60316</a></li>
+              <li><a href="mailto:hello@cocoglo.in">hello@cocoglo.in</a></li>
+              <li><a href="index.html?page=contact">Bhavani, Tamil Nadu</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 COCOGLO. All rights reserved. Made with <span class="footer-lotus">✦</span> and coconut oil.</p>
+          <p>Privacy Policy · Terms of Service</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+      const _navbar = document.getElementById('navbar');
+      if (_navbar) _navbar.classList.add('dark-bg');
+      document.querySelectorAll('[data-nav]').forEach(a => {
+        a.classList.toggle('active', a.dataset.nav === 'classes');
+      });
+      setTimeout(initReveal, 100);
+    </script>
+  </body>
+</html>

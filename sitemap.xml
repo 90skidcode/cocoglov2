@@ -2,13 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cocoglo.in/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://cocoglo.in/#shop</loc>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cocoglo.in/#about</loc>
@@ -21,5 +17,29 @@
   <url>
     <loc>https://cocoglo.in/#contact</loc>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cocoglo.in/online-cold-process-basics.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cocoglo.in/in-person-cold-process-basics.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cocoglo.in/online-artisan-soap-design.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cocoglo.in/in-person-artisan-soap-designing.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
